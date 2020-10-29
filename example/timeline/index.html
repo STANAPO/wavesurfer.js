@@ -33,11 +33,19 @@
     </head>
 
     <body itemscope itemtype="http://schema.org/WebApplication">
-        <div id="demo">
-            <div id="waveform"></div>
-            <div id="wave-timeline"></div>
+        <div>
+            <div id="demo">
+                <div id="waveform">
+                    <div
+                        class="progress progress-striped active"
+                        id="progress-bar"
+                    >
+                        <div class="progress-bar progress-bar-info"></div>
+                    </div>
+                </div>
+                <div id="wave-timeline"></div>
 
-            <!-- <div class="controls">
+                <!-- <div class="controls">
                     <button class="btn btn-primary" data-action="play">
                         <i class="glyphicon glyphicon-play"></i>
                         Play /
@@ -45,6 +53,7 @@
                         Pause
                     </button>
                 </div> -->
+            </div>
         </div>
     </body>
 </html>
