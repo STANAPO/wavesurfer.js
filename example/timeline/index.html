@@ -1,10 +1,3 @@
-<!--
- * @Describle: 
- * @Author: Stan <stan4cy@gmail.com>
- * @Date: 2020-10-29 17:19:03
- * @LastEditors: Stan
- * @LastEditTime: 2020-10-29 17:22:42
--->
 <!DOCTYPE html>
 <html>
     <head>
@@ -50,23 +43,42 @@
     </head>
 
     <body itemscope itemtype="http://schema.org/WebApplication">
-        <div id="demo">
-            <div id="waveform">
-                <div class="progress progress-striped active" id="progress-bar">
-                    <div class="progress-bar progress-bar-info"></div>
-                </div>
+        <div class="container">
+            <div class="header">
+                <noindex>
+                    <ul class="nav nav-pills pull-right">
+                        <li><a href="?fill">Fill</a></li>
+                        <li><a href="?scroll">Scroll</a></li>
+                    </ul>
+                </noindex>
 
-                <!-- Here be waveform -->
+                <h1 itemprop="name">
+                    <a href="http://wavesurfer-js.org">wavesurfer.js</a
+                    ><noindex> + Timeline</noindex>
+                </h1>
             </div>
-            <div id="wave-timeline"></div>
 
-            <div class="controls">
-                <button class="btn btn-primary" data-action="play">
-                    <i class="glyphicon glyphicon-play"></i>
-                    Play /
-                    <i class="glyphicon glyphicon-pause"></i>
-                    Pause
-                </button>
+            <div id="demo">
+                <div id="waveform">
+                    <div
+                        class="progress progress-striped active"
+                        id="progress-bar"
+                    >
+                        <div class="progress-bar progress-bar-info"></div>
+                    </div>
+
+                    <!-- Here be waveform -->
+                </div>
+                <div id="wave-timeline"></div>
+
+                <div class="controls">
+                    <button class="btn btn-primary" data-action="play">
+                        <i class="glyphicon glyphicon-play"></i>
+                        Play /
+                        <i class="glyphicon glyphicon-pause"></i>
+                        Pause
+                    </button>
+                </div>
             </div>
         </div>
     </body>
