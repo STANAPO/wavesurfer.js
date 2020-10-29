@@ -3,7 +3,7 @@
  * @Author: Stan <stan4cy@gmail.com>
  * @Date: 2020-10-29 17:19:03
  * @LastEditors: Stan
- * @LastEditTime: 2020-10-29 17:44:53
+ * @LastEditTime: 2020-10-29 17:45:48
  */
 "use strict";
 
@@ -39,17 +39,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     /* Progress bar */
     (function() {
-        var progressDiv = document.querySelector("#progress-bar");
-        var progressBar = progressDiv.querySelector(".progress-bar");
+        // var progressDiv = document.querySelector("#progress-bar");
+        // var progressBar = progressDiv.querySelector(".progress-bar");
 
-        var showProgress = function(percent) {
-            progressDiv.style.display = "block";
-            progressBar.style.width = percent + "%";
-        };
+        // var showProgress = function(percent) {
+        //     progressDiv.style.display = "block";
+        //     progressBar.style.width = percent + "%";
+        // };
 
-        var hideProgress = function() {
-            progressDiv.style.display = "none";
-        };
+        // var hideProgress = function() {
+        //     progressDiv.style.display = "none";
+        // };
 
         wavesurfer.on("loading", showProgress);
         wavesurfer.on("ready", hideProgress);
