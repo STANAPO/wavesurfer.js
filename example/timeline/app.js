@@ -1,28 +1,36 @@
-'use strict';
+/*
+ * @Describle:
+ * @Author: Stan <stan4cy@gmail.com>
+ * @Date: 2020-10-29 17:19:03
+ * @LastEditors: Stan
+ * @LastEditTime: 2020-10-29 17:44:53
+ */
+"use strict";
 
 var wavesurfer;
 
 // Init & load
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function() {
     var options = {
-        container: '#waveform',
-        waveColor: 'violet',
-        progressColor: 'purple',
-        loaderColor: 'purple',
-        cursorColor: 'navy',
+        container: "#waveform",
+        waveColor: "violet",
+        progressColor: "purple",
+        loaderColor: "purple",
+        cursorColor: "navy",
         plugins: [
             WaveSurfer.timeline.create({
-                container: '#wave-timeline'
+                container: "#wave-timeline",
+                height: "100px"
             })
         ]
     };
 
-    if (location.search.match('scroll')) {
+    if (location.search.match("scroll")) {
         options.minPxPerSec = 100;
         options.scrollParent = true;
     }
 
-    if (location.search.match('normalize')) {
+    if (location.search.match("normalize")) {
         options.normalize = true;
     }
 
@@ -31,23 +39,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
     /* Progress bar */
     (function() {
-        var progressDiv = document.querySelector('#progress-bar');
-        var progressBar = progressDiv.querySelector('.progress-bar');
+        var progressDiv = document.querySelector("#progress-bar");
+        var progressBar = progressDiv.querySelector(".progress-bar");
 
         var showProgress = function(percent) {
-            progressDiv.style.display = 'block';
-            progressBar.style.width = percent + '%';
+            progressDiv.style.display = "block";
+            progressBar.style.width = percent + "%";
         };
 
         var hideProgress = function() {
-            progressDiv.style.display = 'none';
+            progressDiv.style.display = "none";
         };
 
-        wavesurfer.on('loading', showProgress);
-        wavesurfer.on('ready', hideProgress);
-        wavesurfer.on('destroy', hideProgress);
-        wavesurfer.on('error', hideProgress);
+        wavesurfer.on("loading", showProgress);
+        wavesurfer.on("ready", hideProgress);
+        wavesurfer.on("destroy", hideProgress);
+        wavesurfer.on("error", hideProgress);
     })();
 
-    wavesurfer.load('../media/demo.wav');
+    wavesurfer.load("../media/demo.wav");
 });
