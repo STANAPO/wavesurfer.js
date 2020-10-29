@@ -3,7 +3,7 @@
  * @Author: Stan <stan4cy@gmail.com>
  * @Date: 2020-10-29 17:19:03
  * @LastEditors: Stan
- * @LastEditTime: 2020-10-29 17:47:52
+ * @LastEditTime: 2020-10-29 17:49:10
  */
 "use strict";
 
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         plugins: [
             WaveSurfer.timeline.create({
                 container: "#wave-timeline",
-                height: "100px"
+                height: 200
             })
         ]
     };
@@ -39,19 +39,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
     /* Progress bar */
     // (function() {
-        // var progressDiv = document.querySelector("#progress-bar");
-        // var progressBar = progressDiv.querySelector(".progress-bar");
-        // var showProgress = function(percent) {
-        //     progressDiv.style.display = "block";
-        //     progressBar.style.width = percent + "%";
-        // };
-        // var hideProgress = function() {
-        //     progressDiv.style.display = "none";
-        // };
-        // wavesurfer.on("loading", showProgress);
-        // wavesurfer.on("ready", hideProgress);
-        // wavesurfer.on("destroy", hideProgress);
-        // wavesurfer.on("error", hideProgress);
+    // var progressDiv = document.querySelector("#progress-bar");
+    // var progressBar = progressDiv.querySelector(".progress-bar");
+    // var showProgress = function(percent) {
+    //     progressDiv.style.display = "block";
+    //     progressBar.style.width = percent + "%";
+    // };
+    // var hideProgress = function() {
+    //     progressDiv.style.display = "none";
+    // };
+    // wavesurfer.on("loading", showProgress);
+    // wavesurfer.on("ready", hideProgress);
+    // wavesurfer.on("destroy", hideProgress);
+    // wavesurfer.on("error", hideProgress);
     // })();
 
     wavesurfer.load("../media/demo.wav");
