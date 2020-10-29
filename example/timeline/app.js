@@ -3,7 +3,7 @@
  * @Author: Stan <stan4cy@gmail.com>
  * @Date: 2020-10-29 17:19:03
  * @LastEditors: Stan
- * @LastEditTime: 2020-10-29 17:49:10
+ * @LastEditTime: 2020-10-29 17:50:55
  */
 "use strict";
 
@@ -17,12 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
         progressColor: "purple",
         loaderColor: "purple",
         cursorColor: "navy",
-        plugins: [
-            WaveSurfer.timeline.create({
-                container: "#wave-timeline",
-                height: 200
-            })
-        ]
+        height: 150
     };
 
     if (location.search.match("scroll")) {
