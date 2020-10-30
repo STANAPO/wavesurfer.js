@@ -3,7 +3,7 @@
  * @Author: Stan <stan4cy@gmail.com>
  * @Date: 2020-10-29 17:19:03
  * @LastEditors: Stan
- * @LastEditTime: 2020-10-30 13:46:36
+ * @LastEditTime: 2020-10-30 13:47:24
  */
 "use strict";
 
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
     wavesurfer = WaveSurfer.create(options);
 
     (function callJS(message) {
-        message === true && wavesurfer.playPause();
+        message === "true" && wavesurfer.playPause();
     })();
 
     /* Progress bar */
