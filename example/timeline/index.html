@@ -3,7 +3,7 @@
  * @Author: Stan <stan4cy@gmail.com>
  * @Date: 2020-10-29 17:19:03
  * @LastEditors: Stan
- * @LastEditTime: 2020-10-30 15:49:34
+ * @LastEditTime: 2020-10-30 16:06:43
 -->
 <!DOCTYPE html>
 <html>
@@ -49,8 +49,8 @@
             }
 
             if (location.search.match("url")) {
-                const testurl = new URL(location.href);
-                url = testurl.searchParams.get("url");
+                const newURL = new URL(location.href);
+                url = newURL.searchParams.get("url");
             }
 
             // Init wavesurfer
@@ -62,8 +62,6 @@
                     wavesurfer.toggleMute();
                 };
             });
-
-            console.log("url", url);
 
             url && wavesurfer.load(url);
         });
