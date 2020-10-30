@@ -3,7 +3,7 @@
  * @Author: Stan <stan4cy@gmail.com>
  * @Date: 2020-10-29 17:19:03
  * @LastEditors: Stan
- * @LastEditTime: 2020-10-30 14:27:29
+ * @LastEditTime: 2020-10-30 14:28:06
 -->
 <!DOCTYPE html>
 <html>
@@ -52,12 +52,12 @@
             // Init wavesurfer
             wavesurfer = WaveSurfer.create(options);
 
-            wavesurfer.once("ready", function() {
-                function callJS(message) {
-                    // wavesurfer.playPause();
-                    document.getElementById("p1").style.color = message;
-                }
-            });
+            function callJS(message) {
+                wavesurfer.once("ready", function() {
+                    wavesurfer.playPause();
+                });
+                document.getElementById("p1").style.color = message;
+            }
 
             wavesurfer.load("../media/demo.wav");
         });
