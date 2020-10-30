@@ -3,7 +3,7 @@
  * @Author: Stan <stan4cy@gmail.com>
  * @Date: 2020-10-29 17:19:03
  * @LastEditors: Stan
- * @LastEditTime: 2020-10-30 09:22:37
+ * @LastEditTime: 2020-10-30 09:30:35
  */
 "use strict";
 
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     if (location.search.match("scroll")) {
-        options.minPxPerSec = 100;
+        options.minPxPerSec = 84;
         options.scrollParent = true;
     }
 
