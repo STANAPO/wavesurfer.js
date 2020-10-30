@@ -3,7 +3,7 @@
  * @Author: Stan <stan4cy@gmail.com>
  * @Date: 2020-10-29 17:19:03
  * @LastEditors: Stan
- * @LastEditTime: 2020-10-30 15:41:37
+ * @LastEditTime: 2020-10-30 15:49:34
 -->
 <!DOCTYPE html>
 <html>
@@ -59,6 +59,7 @@
             wavesurfer.once("ready", function() {
                 playButton.onclick = function() {
                     wavesurfer.playPause();
+                    wavesurfer.toggleMute();
                 };
             });
 
