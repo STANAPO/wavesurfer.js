@@ -3,7 +3,7 @@
  * @Author: Stan <stan4cy@gmail.com>
  * @Date: 2020-10-29 17:19:03
  * @LastEditors: Stan
- * @LastEditTime: 2020-10-30 14:09:14
+ * @LastEditTime: 2020-10-30 14:11:16
 -->
 <!DOCTYPE html>
 <html>
@@ -21,13 +21,13 @@
 
     <body style="background-color: #ffffff">
         <div id="waveform"></div>
-        <p id="p1" style="visibility:hidden;">
+        <p id="p1" style="color:red;">
             Flutter 调用了 JS. Flutter 调用了 JS. Flutter 调用了 JS.
         </p>
     </body>
     <script>
         function callJS(message) {
-            document.getElementById("p1").style.visibility = message;
+            document.getElementById("p1").style.color = message;
         }
     </script>
 </html>
