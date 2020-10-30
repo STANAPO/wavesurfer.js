@@ -3,7 +3,7 @@
  * @Author: Stan <stan4cy@gmail.com>
  * @Date: 2020-10-29 17:19:03
  * @LastEditors: Stan
- * @LastEditTime: 2020-10-29 17:53:53
+ * @LastEditTime: 2020-10-30 09:22:37
  */
 "use strict";
 
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
         progressColor: "purple",
         loaderColor: "purple",
         cursorColor: "navy",
-        height: 200,
+        height: 100,
         responsive: true
     };
 
