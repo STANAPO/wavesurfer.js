@@ -3,7 +3,7 @@
  * @Author: Stan <stan4cy@gmail.com>
  * @Date: 2020-10-29 17:19:03
  * @LastEditors: Stan
- * @LastEditTime: 2020-10-30 15:36:10
+ * @LastEditTime: 2020-10-30 15:36:28
 -->
 <!DOCTYPE html>
 <html>
@@ -51,6 +51,7 @@
             if (location.search.match("url")) {
                 const testurl = new URL(location.href);
                 url = testurl.searchParams.get("url");
+                console.log("url", url);
             }
 
             // Init wavesurfer
