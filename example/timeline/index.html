@@ -3,7 +3,7 @@
  * @Author: Stan <stan4cy@gmail.com>
  * @Date: 2020-10-29 17:19:03
  * @LastEditors: Stan
- * @LastEditTime: 2020-10-30 14:11:16
+ * @LastEditTime: 2020-10-30 14:13:15
 -->
 <!DOCTYPE html>
 <html>
@@ -29,5 +29,33 @@
         function callJS(message) {
             document.getElementById("p1").style.color = message;
         }
+
+        var wavesurfer;
+
+        // Init & load
+        document.addEventListener("DOMContentLoaded", function() {
+            var options = {
+                container: "#waveform",
+                waveColor: "violet",
+                progressColor: "purple",
+                loaderColor: "purple",
+                cursorColor: "navy",
+                height: 84,
+                responsive: true
+            };
+
+            if (location.search.match("scroll")) {
+                options.minPxPerSec = 100;
+                options.scrollParent = true;
+            }
+
+            if (location.search.match("normalize")) {
+                options.normalize = true;
+            }
+
+            // Init wavesurfer
+            wavesurfer = WaveSurfer.create(options);
+            wavesurfer.load("../media/demo.wav");
+        });
     </script>
 </html>
