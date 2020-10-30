@@ -3,7 +3,7 @@
  * @Author: Stan <stan4cy@gmail.com>
  * @Date: 2020-10-29 17:19:03
  * @LastEditors: Stan
- * @LastEditTime: 2020-10-30 09:30:35
+ * @LastEditTime: 2020-10-30 09:31:28
  */
 "use strict";
 
@@ -17,12 +17,12 @@ document.addEventListener("DOMContentLoaded", function() {
         progressColor: "purple",
         loaderColor: "purple",
         cursorColor: "navy",
-        height: 100,
+        height: 84,
         responsive: true
     };
 
     if (location.search.match("scroll")) {
-        options.minPxPerSec = 84;
+        options.minPxPerSec = 100;
         options.scrollParent = true;
     }
 
