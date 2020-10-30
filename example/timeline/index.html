@@ -3,7 +3,7 @@
  * @Author: Stan <stan4cy@gmail.com>
  * @Date: 2020-10-29 17:19:03
  * @LastEditors: Stan
- * @LastEditTime: 2020-10-30 14:21:55
+ * @LastEditTime: 2020-10-30 14:26:45
 -->
 <!DOCTYPE html>
 <html>
@@ -53,9 +53,9 @@
             wavesurfer = WaveSurfer.create(options);
 
             wavesurfer.once("ready", function() {
-                function callJS() {
+                function callJS(message) {
                     wavesurfer.playPause();
-                    // document.getElementById("p1").style.color = message;
+                    document.getElementById("p1").style.color = message;
                 }
             });
 
