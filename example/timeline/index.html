@@ -3,7 +3,7 @@
  * @Author: Stan <stan4cy@gmail.com>
  * @Date: 2020-10-29 17:19:03
  * @LastEditors: Stan
- * @LastEditTime: 2020-10-30 14:28:06
+ * @LastEditTime: 2020-10-30 14:32:30
 -->
 <!DOCTYPE html>
 <html>
@@ -21,12 +21,16 @@
 
     <body>
         <div id="waveform"></div>
-        <p id="p1" style="color:red;">
+        <button id="playBtn" style="color:red;">
             Flutter 调用了 JS. Flutter 调用了 JS. Flutter 调用了 JS.
-        </p>
+        </button>
     </body>
     <script>
         var wavesurfer;
+
+        function callJS(message) {
+            document.getElementById("playBtn").style.color = message;
+        }
 
         // Init & load
         document.addEventListener("DOMContentLoaded", function() {
@@ -40,6 +44,8 @@
                 responsive: true
             };
 
+            var playButton = document.querySelector("#playBtn");
+
             if (location.search.match("scroll")) {
                 options.minPxPerSec = 100;
                 options.scrollParent = true;
@@ -52,12 +58,11 @@
             // Init wavesurfer
             wavesurfer = WaveSurfer.create(options);
 
-            function callJS(message) {
-                wavesurfer.once("ready", function() {
+            wavesurfer.once("ready", function() {
+                playButton.onclick = function() {
                     wavesurfer.playPause();
-                });
-                document.getElementById("p1").style.color = message;
-            }
+                };
+            });
 
             wavesurfer.load("../media/demo.wav");
         });
