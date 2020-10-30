@@ -3,7 +3,7 @@
  * @Author: Stan <stan4cy@gmail.com>
  * @Date: 2020-10-29 17:19:03
  * @LastEditors: Stan
- * @LastEditTime: 2020-10-30 13:50:37
+ * @LastEditTime: 2020-10-30 13:57:51
  */
 "use strict";
 
@@ -33,10 +33,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // Init wavesurfer
     wavesurfer = WaveSurfer.create(options);
 
-    (function callJS(message) {
-        document.getElementById("p1").style.visibility = message;
-        // message === "true" && wavesurfer.playPause();
-    })();
+    // (function callJS(message) {
+    //     document.getElementById("p1").style.visibility = message;
+    //     // message === "true" && wavesurfer.playPause();
+    // })();
 
     /* Progress bar */
     // (function() {
