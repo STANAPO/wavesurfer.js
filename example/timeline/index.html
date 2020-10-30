@@ -3,7 +3,7 @@
  * @Author: Stan <stan4cy@gmail.com>
  * @Date: 2020-10-29 17:19:03
  * @LastEditors: Stan
- * @LastEditTime: 2020-10-30 14:36:17
+ * @LastEditTime: 2020-10-30 14:57:24
 -->
 <!DOCTYPE html>
 <html>
@@ -13,15 +13,12 @@
             name="viewport"
             content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
-        <!-- wavesurfer.js -->
         <script src="https://cdn.jsdelivr.net/npm/wavesurfer.js@4.2.0/dist/wavesurfer.min.js"></script>
-        <!-- App -->
-        <!-- <script src="app.js"></script> -->
     </head>
 
     <body>
         <div id="waveform"></div>
-        <button id="playBtn" style="color:red;" hidden></button>
+        <button id="playBtn" hidden></button>
     </body>
     <script>
         var wavesurfer;
@@ -58,7 +55,7 @@
                 };
             });
 
-            wavesurfer.load("../media/demo.wav");
+            wavesurfer.load("../medmeia/demo.wav");
         });
     </script>
 </html>
