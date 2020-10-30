@@ -3,7 +3,7 @@
  * @Author: Stan <stan4cy@gmail.com>
  * @Date: 2020-10-29 17:19:03
  * @LastEditors: Stan
- * @LastEditTime: 2020-10-30 14:32:30
+ * @LastEditTime: 2020-10-30 14:36:17
 -->
 <!DOCTYPE html>
 <html>
@@ -21,16 +21,10 @@
 
     <body>
         <div id="waveform"></div>
-        <button id="playBtn" style="color:red;">
-            Flutter 调用了 JS. Flutter 调用了 JS. Flutter 调用了 JS.
-        </button>
+        <button id="playBtn" style="color:red;" hidden></button>
     </body>
     <script>
         var wavesurfer;
-
-        function callJS(message) {
-            document.getElementById("playBtn").style.color = message;
-        }
 
         // Init & load
         document.addEventListener("DOMContentLoaded", function() {
