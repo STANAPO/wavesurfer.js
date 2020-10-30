@@ -3,7 +3,7 @@
  * @Author: Stan <stan4cy@gmail.com>
  * @Date: 2020-10-29 17:19:03
  * @LastEditors: Stan
- * @LastEditTime: 2020-10-30 14:13:40
+ * @LastEditTime: 2020-10-30 14:20:54
 -->
 <!DOCTYPE html>
 <html>
@@ -26,10 +26,6 @@
         </p>
     </body>
     <script>
-        function callJS(message) {
-            document.getElementById("p1").style.color = message;
-        }
-
         var wavesurfer;
 
         // Init & load
@@ -56,6 +52,11 @@
             // Init wavesurfer
             wavesurfer = WaveSurfer.create(options);
             wavesurfer.load("../media/demo.wav");
+
+            function callJS(message) {
+                wavesurfer.playPause();
+                // document.getElementById("p1").style.color = message;
+            }
         });
     </script>
 </html>
