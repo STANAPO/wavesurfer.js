@@ -3,7 +3,7 @@
  * @Author: Stan <stan4cy@gmail.com>
  * @Date: 2020-10-29 17:19:03
  * @LastEditors: Stan
- * @LastEditTime: 2020-10-30 15:11:24
+ * @LastEditTime: 2020-10-30 15:35:49
 -->
 <!DOCTYPE html>
 <html>
@@ -24,8 +24,7 @@
         <button id="playBtn" hidden></button>
     </body>
     <script>
-        var wavesurfer;
-
+        let url = "";
         // Init & load
         document.addEventListener("DOMContentLoaded", function() {
             var options = {
@@ -49,8 +48,13 @@
                 options.normalize = true;
             }
 
+            if (location.search.match("url")) {
+                const testurl = new URL(location.href);
+                url = url.searchParams.get("url");
+            }
+
             // Init wavesurfer
-            wavesurfer = WaveSurfer.create(options);
+            const wavesurfer = WaveSurfer.create(options);
 
             wavesurfer.once("ready", function() {
                 playButton.onclick = function() {
@@ -58,7 +62,7 @@
                 };
             });
 
-            wavesurfer.load("../media/demo.wav");
+            wavesurfer.load(url);
         });
     </script>
 </html>
